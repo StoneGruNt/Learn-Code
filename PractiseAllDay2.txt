@@ -1,0 +1,37 @@
+
+public class PractiseAllDay2 {
+	public static void main(String[]args) {
+		char ase = 'k';
+		System.out.println(ase);
+		int k= (ase);
+		System.out.println(k);
+		float j=ase;
+		System.out.println(j);
+		char c='s';char hami='8';char kal =')';char bashi ='@';char hemu = 'f';
+		int p=c;int l=hami;int m=kal;int n=bashi; int b=hemu;
+				System.out.println(p);
+				System.out.println(l);
+				System.out.println(m);
+				System.out.println(n);
+				System.out.println(b);
+		float h =3687.0259f;
+		int y=(int) h; System.out.println(h);
+		System.out.println(y);
+		int v;
+		int r=6578;short t;short u=26;long z= -256874;
+		long e=-5278964;long f=-854796311;
+		v=2569;
+		t=25;
+		System.out.println(v);System.out.println(r);System.out.println(t);
+		System.out.println(u);
+		String Blue_house="honey";String Jammu ="KASHMIR";
+		System.out.println(Blue_house+Jammu);
+		
+		
+		
+		
+		
+		
+	}
+
+}
