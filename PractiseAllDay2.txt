@@ -15,16 +15,20 @@ public class PractiseAllDay2 {
 				System.out.println(n);
 				System.out.println(b);
 		float h =3687.0259f;
-		int y=(int) h; System.out.println(h);
+		int y=(int) h;
+		System.out.println(h);
 		System.out.println(y);
 		int v;
 		int r=6578;short t;short u=26;long z= -256874;
 		long e=-5278964;long f=-854796311;
 		v=2569;
 		t=25;
-		System.out.println(v);System.out.println(r);System.out.println(t);
+		System.out.println(v);
+		System.out.println(r);
+		System.out.println(t);
 		System.out.println(u);
-		String Blue_house="honey";String Jammu ="KASHMIR";
+		String Blue_house="honey";
+		String Jammu ="KASHMIR";
 		System.out.println(Blue_house+Jammu);
 		
 		
