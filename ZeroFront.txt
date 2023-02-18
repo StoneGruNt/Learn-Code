@@ -1,0 +1,50 @@
+
+import java.util.Scanner;
+
+public class ZeroFront {
+	public static void  zeroFront(int[] nums) {
+		  int zero=0;
+		  for(int i=0;i<len(nums);i++){	//count zeroes
+		    if(nums[i]==0)zero++;
+		  }
+		  int []a=new int[len(nums)];
+		  for(int i=0;i<zero;i++){	// place zero number zeroe's in new Array 
+		    a[i]=0;
+		  }
+		   for(int i=0;i<len(nums);i++){
+		    if(nums[i]!=0){			// place non zero's in the new array after zeroe's
+		      a[zero]=nums[i];
+		      zero++;
+		    }
+		  }
+		   printArray(a);
+		}
+	public static void  printArray(int[]nums) {
+		System.out.print( "[");
+		   for (int i = 0; i < len(nums); i++) { //for loop to print the array  
+				System.out.print( nums[i]+ " "); }
+		   System.out.print( "]");
+	}
+	public static int  len(int[]nums) {
+		int count=0;
+		for(int na:nums) { // method for array.length using for each loop
+			count++;
+		}
+		return count;
+	}
+	public static int[]   getArr(int n) {
+		Scanner scan=new Scanner(System.in);
+		int []nums=new int[n];
+		for(int i=0;i<n;i++) {	//for loop to take integers and place in Array
+			System.out.println("Enter The Value of Array["+i+"] = ");
+			int j=scan.nextInt();
+			nums[i]=j;	
+		}
+		return nums;
+	}
+public static void main(String[]args) {
+	Scanner scan= new Scanner(System.in);
+	System.out.println("Enter The Array Size = ");
+	int n=scan.nextInt();
+		zeroFront(getArr(n));	  
+	}
