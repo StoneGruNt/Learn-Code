@@ -1,0 +1,43 @@
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+
+	//new Array to sort the whole combined Array
+        double[] nums3=new double[nums1.length+nums2.length];
+	
+	// place first Array in new Array
+        for(int i =0;i<nums1.length;i++){
+            nums3[i]=nums1[i];
+        }
+
+        int n =nums1.length+nums2.length-1;
+        int j = nums2.length-1;
+
+	// add the second array to new combined array
+        while( n>nums1.length-1){
+            nums3[n]=nums2[j];
+                n--;
+                j--;
+
+        } 
+
+	// sort the new combined two Arrays       
+         for(int k =0;k<nums3.length;k++){
+            for(int l =0;l<nums3.length;l++){
+                
+                if(nums3[k]>nums3[l]){
+                    double temp =nums3[k];
+                nums3[k]=nums3[l];
+                nums3[l]=temp;
+                }
+            }
+        }
+	
+
+	//find if median of array is even or odd
+        int median=nums1.length+nums2.length;
+
+
+        if(median%2!=0)return nums3[median/2];
+        else return (double)(nums3[(median-1)/2]+nums3[(median)/2])/2;
+    }
+}
