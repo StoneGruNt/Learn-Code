@@ -1,9 +1,0 @@
-
-public class PracticeAllDay1 {
-	public static void main(String[] args) {
-		System.out.println("My name is  "+"Hemanth");
-		System.out.println("My age is "+"21\nMy email address is "+"hemanthkoti17@gmail.com");
-		
-	}
-
-}

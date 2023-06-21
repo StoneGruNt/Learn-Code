@@ -1,0 +1,46 @@
+import java.util.*;
+
+public class ExperimentsWithLoops {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the value of array at index 0: ");
+		int[] Hemu = new int[5];
+		Hemu[0] = scan.nextInt();
+		System.out.println("Enter the value of array at index 1: ");
+		Hemu[1] = scan.nextInt();
+		System.out.println("Enter the value of array at index 2: ");
+		Hemu[2] = scan.nextInt();
+		System.out.println("Enter the value of array at index 3: ");
+		Hemu[3] = scan.nextInt();
+		System.out.println("Enter the value of array at index 4: ");
+		Hemu[4] = scan.nextInt();
+		System.out.print("Avearge excluding min and max in array: ");
+		System.out.println(centeredAverage(Hemu));
+
+	}
+
+	public static int centeredAverage(int[] nums) {
+		int min = Math.min(nums[1], nums[0]);
+		int max = Math.max(nums[1], nums[0]);
+		int sum = 0;
+		for (int i = 1; i < nums.length; i++) {
+			int min2 = Math.min(nums[0], nums[i]);
+			if (min > min2)
+				min = min2;
+			int max2 = Math.max(nums[0], nums[i]);
+			if (max2 > max)
+				max = max2;
+
+		}
+		for (int i = 0; i < nums.length; i++) {
+			sum = nums[i] + sum;
+		}
+		int c = max + min;
+		int average2 = sum - c;
+		int n = nums.length - 2;
+		int average = average2 / n;
+		return average;
+
+	}
+
+}
